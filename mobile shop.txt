@@ -1,0 +1,10 @@
+home
+product
+
+
+
+primary color - #FAFAFA
+secondary color - 353535
+cards colors - EDEDED
+banner color - 211C24
+for buttons - black

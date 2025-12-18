@@ -1,3 +1,4 @@
+import UserForm from "../../components/UserForm";
 
 function Contact() {
   return (
@@ -7,11 +8,9 @@ function Contact() {
           <h1 className="text-4xl text-white font-bold">Contact Us</h1>
           <p className="text-white w-5xl text-2xl">Visit our physical stores located in the heart of bole or fill and submit the form below for any requests or questions.</p>
         </div>
-        <div>
-          <div>
-            <form action=""></form>
-            <div></div>
-          </div>
+        <div className="flex">
+          <UserForm />
+          <div></div>
         </div>
       </div>
     </section>

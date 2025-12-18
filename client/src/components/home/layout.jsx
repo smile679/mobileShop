@@ -9,6 +9,7 @@ import macbook from "../../assets/Macbook.png";
 import watch01 from "../../assets/watch01.png";
 import Discounts from "../../pages/home/Discounts";
 import About from "../../pages/home/About";
+import Contact from "../../pages/home/Contact";
 
 function Home() {
   const pro = [
@@ -95,7 +96,7 @@ function Home() {
           ))}
       </div>
       <Discounts />
-      <About />
+      <Contact />
     </section>
   );
 }

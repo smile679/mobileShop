@@ -1,5 +1,3 @@
-import aboutBanner from "../../assets/aboutBanner.png"
-
 function About() {
   return (
     <section>

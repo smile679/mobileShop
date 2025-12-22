@@ -1,36 +1,94 @@
+import { useState } from "react";
+
 function UserForm({ handleSubmit }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
+  function onSubmit(e) {
+    e.preventDefault();
+    handleSubmit(formData);
+    setFormData({ name: "", email: "", message: "" });
+  }
+
   return (
-    <section>
+    <section className="w-full flex items-center justify-center">
       <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-2"
+        onSubmit={onSubmit}
+        className="w-full max-w-md p-6 rounded-xl border border-zinc-800 shadow-lg flex flex-col gap-2"
       >
-        <label htmlFor="name" className="text-white">
-          Name:
+        <h2 className="text-white text-xl font-semibold text-center">
+          Contact Us
+        </h2>
+
+        {/* Name */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="name" className="text-zinc-300 text-sm">
+            Name
+          </label>
           <input
             type="text"
             id="name"
-            placeholder="input your name here!"
-            className="text-white border"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your name"
+            required
+            className="border border-zinc-700 rounded-md px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-white transition"
           />
-        </label>
-        <label htmlFor="email" className="text-white">
-          Email :
-          <input 
-            type="email" 
-            id="email" 
-            placeholder="input your email here!" 
-            className="border"
-        />
-        </label>
-        <label htmlFor="message">
+        </div>
+
+        {/* Email */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email" className="text-zinc-300 text-sm">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="your@email.com"
+            required
+            className="border border-zinc-700 rounded-md px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-white transition"
+          />
+        </div>
+
+        {/* Message */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="message" className="text-zinc-300 text-sm">
+            Message
+          </label>
           <textarea
-            name="message"
             id="message"
-            placeholder="input your message here!"
-          ></textarea>
-        </label>
-        <button type="submit"> Submit </button>
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Write your message..."
+            rows={4}
+            required
+            className="border border-zinc-700 rounded-md px-3 py-2 text-white placeholder-zinc-500 resize-none focus:outline-none focus:border-white transition"
+          />
+        </div>
+
+        {/* Submit */}
+        <button
+          type="submit"
+          className="mt-2 bg-white text-black font-semibold py-2 rounded-md hover:bg-zinc-200 transition"
+        >
+          Send Message
+        </button>
       </form>
     </section>
   );

@@ -45,7 +45,7 @@ function Home() {
   ];
 
   return (
-    <section className="flex flex-col mb-50">
+    <section className="flex flex-col">
       <Hero />
       <Category />
       <HomeProducts />
@@ -95,8 +95,8 @@ function Home() {
             </div>
           ))}
       </div>
-      <Discounts />
       <Contact />
+      <Discounts />
     </section>
   );
 }

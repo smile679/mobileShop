@@ -1,10 +1,10 @@
-import iphone from "../../assets/New Arraivals/iphone_14_pro.png"
-import earPhone from "../../assets/New Arraivals/earPhone.png"
-import headSet from "../../assets/New Arraivals/headSet.png"
-import mobile from "../../assets/New Arraivals/mobile.png"
-import smartWatch from "../../assets/New Arraivals/smartWatch.png"
-import tablet from "../../assets/New Arraivals/tablet.png"
-import watch from "../../assets/New Arraivals/watch.png"
+import iphone from "../../assets/New-arraivals/iphone_14_pro.png"
+import earPhone from "../../assets/New-arraivals//earPhone.png"
+import headSet from "../../assets/New-arraivals/headSet.png"
+import mobile from "../../assets/New-arraivals/mobile.png"
+import smartWatch from "../../assets/New-arraivals/smartWatch.png"
+import tablet from "../../assets/New-arraivals/tablet.png"
+import watch from "../../assets/New-arraivals/watch.png"
 import { Button } from "../../components/ui/button"
 
 function NewProducts() {

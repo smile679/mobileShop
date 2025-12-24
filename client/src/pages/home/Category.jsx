@@ -44,7 +44,7 @@ function Category() {
   }]
 
   return ( 
-    <div className="bg-[#FAFAFA] p-5 sm:p-10">
+    <div className="bg-[#FAFAFA] px-5 sm:px-10 py-15 md:py-25">
       <div className="flex flex-col max-w-6xl mx-auto">
         <h2 className="text-xl mb-5 font-semibold">Browse By Category</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5">

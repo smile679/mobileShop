@@ -45,11 +45,11 @@ function Home() {
   ];
 
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col pt-18">
       <Hero />
       <Category />
       <HomeProducts />
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 my-10">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 pb-15 md:pb-30">
         {pro &&
           pro.map((item, index) => (
             <div

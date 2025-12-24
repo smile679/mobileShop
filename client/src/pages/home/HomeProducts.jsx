@@ -10,7 +10,7 @@ import UsedProducts from "./UsedProducts";
 function HomeProducts() {
  
   return (
-    <div className="w-full max-w-6xl mx-auto flex flex-col p-5 sm:p-10">
+    <div className="w-full max-w-6xl mx-auto flex flex-col px-5 sm:px-10 py-10 md:py-20">
       <Tabs defaultValue="new" className="w-full gap-5">
         <TabsList>
           <TabsTrigger value="new" className="text-md">

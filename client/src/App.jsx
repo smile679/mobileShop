@@ -8,7 +8,7 @@ import Footer from './components/footer/Footer'
 function App(){
 
   return (
-    <div className='min-h-screen'>
+    <div className='relative min-h-screen'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} /> 

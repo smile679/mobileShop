@@ -7,9 +7,8 @@ export default function ShopMap() {
     <MapContainer
       center={shopPosition}
       zoom={15}
-      // style={{ height: "100%", width: "100%" }}
-      className="w-full max-h-100"
-      scrollWheelZoom={true}
+      style={{ height: "400px", width: "100%", zIndex: "10", borderRadius: "10px" }}
+      scrollWheelZoom={false}
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'

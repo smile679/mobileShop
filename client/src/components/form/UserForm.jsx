@@ -25,7 +25,7 @@ function UserForm({ handleSubmit }) {
     <section className="w-full flex items-center justify-center">
       <form
         onSubmit={onSubmit}
-        className="w-full max-w-md p-6 rounded-xl border border-zinc-800 shadow-lg flex flex-col gap-2"
+        className="w-full max-w-md p-6 rounded-xl border border-zinc-200 shadow-lg flex flex-col gap-2"
       >
         <h2 className="text-white text-xl font-semibold text-center">
           Contact Us
@@ -33,7 +33,7 @@ function UserForm({ handleSubmit }) {
 
         {/* Name */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="name" className="text-zinc-300 text-sm">
+          <label htmlFor="name" className="text-zinc-100 text-sm">
             Name
           </label>
           <input
@@ -44,13 +44,13 @@ function UserForm({ handleSubmit }) {
             onChange={handleChange}
             placeholder="Your name"
             required
-            className="border border-zinc-700 rounded-md px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-white transition"
+            className="border border-zinc-200 rounded-md px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-white transition"
           />
         </div>
 
         {/* Email */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="text-zinc-300 text-sm">
+          <label htmlFor="email" className="text-zinc-200 text-sm">
             Email
           </label>
           <input
@@ -61,13 +61,13 @@ function UserForm({ handleSubmit }) {
             onChange={handleChange}
             placeholder="your@email.com"
             required
-            className="border border-zinc-700 rounded-md px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-white transition"
+            className="border border-zinc-200 rounded-md px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-white transition"
           />
         </div>
 
         {/* Message */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="text-zinc-300 text-sm">
+          <label htmlFor="message" className="text-zinc-200 text-sm">
             Message
           </label>
           <textarea
@@ -78,7 +78,7 @@ function UserForm({ handleSubmit }) {
             placeholder="Write your message..."
             rows={4}
             required
-            className="border border-zinc-700 rounded-md px-3 py-2 text-white placeholder-zinc-500 resize-none focus:outline-none focus:border-white transition"
+            className="border border-zinc-200 rounded-md px-3 py-2 text-white placeholder-zinc-500 resize-none focus:outline-none focus:border-white transition"
           />
         </div>
 

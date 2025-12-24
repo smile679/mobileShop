@@ -1,0 +1,8 @@
+import L from "leaflet";
+
+const shopIcon = new L.Icon({
+  iconUrl: "/shop-marker.png",
+  iconSize: [40, 40],
+});
+
+<Marker position={shopPosition} icon={shopIcon} />

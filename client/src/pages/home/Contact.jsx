@@ -13,7 +13,7 @@ function Contact() {
           <div className="w-full flex md:flex-1 justify-center items-center">
             <UserForm />
           </div>
-          <div className="w-full flex md:flex-2 justify-center items-center overflow-hidden">
+          <div className="w-full flex md:flex-2 justify-center items-center">
             <ShopMap />
           </div>
         </div>

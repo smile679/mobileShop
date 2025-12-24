@@ -63,4 +63,5 @@ function NewProducts() {
    );
 }
 
+
 export default NewProducts;

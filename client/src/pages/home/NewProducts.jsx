@@ -44,7 +44,7 @@ function NewProducts() {
     price : "42,000 birr",
   }]
   return ( 
-    <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-5 p-">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 p-">
       {
         products && products.map((item, index)=>(
           <div key={index} className="flex flex-col justify-between items-center text-center bg-[#F6F6F6] py-5 rounded-md shadow-md">

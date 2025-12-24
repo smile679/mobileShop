@@ -1,8 +1,11 @@
+import { memo, useMemo } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Button } from "../ui/button";
 
-const shopPosition = [8.9806, 38.7578]; // Addis Ababa (replace with your shop)
+ const ShopMap = memo( ()=> {
 
-export default function ShopMap() {
+  const shopPosition = useMemo(() => [8.9806, 38.7578], []);
+
   return (
     <MapContainer
       center={shopPosition}
@@ -17,13 +20,26 @@ export default function ShopMap() {
 
       <Marker position={shopPosition}>
         <Popup>
-          <strong>My Shop</strong>
-          <br />
-          Addis Ababa
-          <br />
-          +251 9XX XXX XXX
+          <div className="flex flex-col gap-1">
+            <strong>My Shop</strong>
+            <span>+251 943712048</span>
+              <span>Addis Ababa, Bole</span>
+          </div>
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${shopPosition[0]},${shopPosition[1]}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm"
+          >
+            <Button className="mt-2 bg-blue-700 hover:bg-blue-600 cursor-pointer">
+              Get Directions
+            </Button>
+          </a>
         </Popup>
       </Marker>
     </MapContainer>
   );
 }
+ )
+
+ export default ShopMap;

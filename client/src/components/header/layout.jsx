@@ -17,7 +17,7 @@ function Header() {
         id : "contact"
     }]
   return ( 
-    <header className="w-full py-5 px-10 fixed top-0 left-0 bg-white shadow-md shadow-gray-400 z-100">
+    <header className="w-full py-3 px-10 fixed top-0 left-0 bg-white z-100">
       <div className="w-full max-w-6xl mx-auto flex justify-between items-center">
         <h2 className="text-2xl font-bold">Jimi Mobile</h2>
         <nav className="hidden sm:flex gap-x-5">

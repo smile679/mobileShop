@@ -45,7 +45,7 @@ function Home() {
   ];
 
   return (
-    <section className="flex flex-col pt-18">
+    <section className="flex flex-col">
       <Hero />
       <Category />
       <HomeProducts />

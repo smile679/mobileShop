@@ -1,5 +1,5 @@
 import iphone from "../../assets/New-arraivals/iphone_14_pro.png"
-import earPhone from "../../assets/New-arraivals//earPhone.png"
+import earPhone from "../../assets/New-arraivals/earPhone.png"
 import headSet from "../../assets/New-arraivals/headSet.png"
 import mobile from "../../assets/New-arraivals/mobile.png"
 import smartWatch from "../../assets/New-arraivals/smartWatch.png"

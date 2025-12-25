@@ -1,10 +1,10 @@
-import iphone from "../../assets/New Arraivals/iphone_14_pro.png"
-import earPhone from "../../assets/New Arraivals/earPhone.png"
-import headSet from "../../assets/New Arraivals/headSet.png"
-import mobile from "../../assets/New Arraivals/mobile.png"
-import smartWatch from "../../assets/New Arraivals/smartWatch.png"
-import tablet from "../../assets/New Arraivals/tablet.png"
-import watch from "../../assets/New Arraivals/watch.png"
+import iphone from "../../assets/New-arrivals/iphone_14_pro.png"
+import earPhone from "../../assets/New-arrivals/earPhone.png"
+import headSet from "../../assets/New-arrivals/headSet.png"
+import mobile from "../../assets/New-arrivals/mobile.png"
+import smartWatch from "../../assets/New-arrivals/smartWatch.png"
+import tablet from "../../assets/New-arrivals/tablet.png"
+import watch from "../../assets/New-arrivals/watch.png"
 
 function UsedProducts() {
   const products = [{

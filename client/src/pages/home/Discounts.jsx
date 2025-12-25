@@ -1,7 +1,7 @@
-import iphone from "../../assets/New Arraivals/iphone_14_pro.png"
-import headSet from "../../assets/New Arraivals/headSet.png"
-import smartWatch from "../../assets/New Arraivals/smartWatch.png"
-import tablet from "../../assets/New Arraivals/tablet.png"
+import iphone from "../../assets/New-arrivals/iphone_14_pro.png"
+import headSet from "../../assets/New-arrivals/headSet.png"
+import smartWatch from "../../assets/New-arrivals/smartWatch.png"
+import tablet from "../../assets/New-arrivals/tablet.png"
 import { Button } from "../../components/ui/button"
 
 function Discounts() {

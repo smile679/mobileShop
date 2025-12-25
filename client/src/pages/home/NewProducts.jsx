@@ -1,10 +1,10 @@
-import iphone from "../../assets/New-arraivals/iphone_14_pro.png"
-import earPhone from "../../assets/New-arraivals/earPhone.png"
-import headSet from "../../assets/New-arraivals/headSet.png"
-import mobile from "../../assets/New-arraivals/mobile.png"
-import smartWatch from "../../assets/New-arraivals/smartWatch.png"
-import tablet from "../../assets/New-arraivals/tablet.png"
-import watch from "../../assets/New-arraivals/watch.png"
+import iphone from "../../assets/New-arrivals/iphone_14_pro.png";
+import earPhone from "../../assets/New-arrivals/earPhone.png";
+import headSet from "../../assets/New-arrivals/headSet.png";
+import mobile from "../../assets/New-arrivals/mobile.png";
+import smartWatch from "../../assets/New-arrivals/smartWatch.png";
+import tablet from "../../assets/New-arrivals/tablet.png";
+import watch from "../../assets/New-arrivals/watch.png";
 import { Button } from "../../components/ui/button"
 
 function NewProducts() {
@@ -62,6 +62,5 @@ function NewProducts() {
     </div>
    );
 }
-
 
 export default NewProducts;

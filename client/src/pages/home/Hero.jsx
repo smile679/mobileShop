@@ -36,8 +36,8 @@ function Hero() {
   }, []);
 
   return (
-    <section className="w-full min-h-screen flex items-center bg-gray-900 px-15 overflow-hidden mt-15">
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2">
+    <section className="w-full flex items-center bg-gray-900 px-15 overflow-hidden mt-15">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 pt-20">
         <div className="flex flex-col justify-center max-sm:items-center max-sm:text-center space-y-5 max-sm:pt-20">
           {/* <p className="text-white">Pro.Beyond.</p> */}
           <h2 className="text-white text-7xl font-light">Iphone 17 pro</h2>

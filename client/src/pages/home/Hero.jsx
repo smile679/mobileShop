@@ -15,6 +15,7 @@ function Hero() {
     mobile3,
     mobile4,
     mobile5,
+    mobile6,
   ]);
   const [fade, setFade] = useState(true);
   const navigate = useNavigate();
@@ -36,9 +37,9 @@ function Hero() {
   }, []);
 
   return (
-    <section className="w-full flex items-center bg-gray-900 px-15 overflow-hidden mt-15">
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 pt-20">
-        <div className="flex flex-col justify-center max-sm:items-center max-sm:text-center space-y-5 max-sm:pt-20">
+    <section className="w-full flex items-center bg-gray-900 px-5 sm:px-15 overflow-hidden mt-15">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:pt-35 gap-5">
+        <div className="flex flex-col max-sm:items-center max-sm:text-center space-y-5 max-sm:pt-20">
           {/* <p className="text-white">Pro.Beyond.</p> */}
           <h2 className="text-white text-7xl font-light">Iphone 17 pro</h2>
           <p className="text-white text-xl text-pretty">
@@ -65,7 +66,7 @@ function Hero() {
             src={images[0]}
             alt="Phone"
             className={`
-              absolute bottom-0 w-full max-w-90 object-fill
+              absolute bottom-0 w-full h-full object-contain
               transition-all duration-500 ease-in-out
               ${fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
             `}

@@ -44,22 +44,44 @@ function Products() {
     price : "42,000 birr",
   }]
   return ( 
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 p-">
-      {
-        products && products.map((item, index)=>(
-          <div key={index} className="flex flex-col justify-between items-center text-center bg-[#F6F6F6] py-5 rounded-md shadow-md">
-            <div className="h-40 sm:h-48 md:h-45 ">
-               <img src={item?.image} alt={item?.image} className=""/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <h3 className="font-semibold">{item?.title}</h3>
-              <h3  className="text-lg font-bold">{item?.price}</h3>
-              <Button className="w-1/2">Buy Now</Button>
-            </div>
-          </div>
-        ))
-      }
-    </div>
+    <section className="mt-5">
+      <div className="w-full max-w-6xl mx-auto flex flex-col my-15">
+        <h2 className="text-2xl font-semibold py-10">Used cell phones</h2>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {
+            products && products.map((item, index)=>(
+              <div key={index} className="flex flex-col justify-between items-center text-center bg-[#F6F6F6] py-5 rounded-md shadow-md">
+                <div className="h-40 sm:h-48 md:h-45 ">
+                  <img src={item?.image} alt={item?.image} className=""/>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <h3 className="font-semibold">{item?.title}</h3>
+                  <h3  className="text-lg font-bold">{item?.price}</h3>
+                  <Button className="w-1/2">Buy Now</Button>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <h2 className="text-2xl font-semibold py-10">New cell phones</h2>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {
+            products && products.map((item, index)=>(
+              <div key={index} className="flex flex-col justify-between items-center text-center bg-[#F6F6F6] py-5 rounded-md shadow-md">
+                <div className="h-40 sm:h-48 md:h-45 ">
+                  <img src={item?.image} alt={item?.image} className=""/>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <h3 className="font-semibold">{item?.title}</h3>
+                  <h3  className="text-lg font-bold">{item?.price}</h3>
+                  <Button className="w-1/2">Buy Now</Button>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
    );
 }
 

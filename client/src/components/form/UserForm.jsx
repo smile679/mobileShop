@@ -25,7 +25,7 @@ function UserForm({ handleSubmit }) {
     <section className="w-full flex items-center justify-center">
       <form
         onSubmit={onSubmit}
-        className="w-full p-6 rounded-xl border border-zinc-200 shadow-lg flex flex-col gap-2"
+        className="w-full p-6 rounded-xl border border-zinc-400 shadow-lg flex flex-col gap-2"
       >
         <h2 className="text-white text-xl font-semibold text-center">
           Contact Us
@@ -85,7 +85,7 @@ function UserForm({ handleSubmit }) {
         {/* Submit */}
         <button
           type="submit"
-          className="mt-2 bg-white text-black font-semibold py-2 rounded-md hover:bg-zinc-200 transition"
+          className="mt-2 bg-white text-black font-semibold py-2 rounded-md hover:bg-zinc-200 transition cursor-pointer"
         >
           Send Message
         </button>

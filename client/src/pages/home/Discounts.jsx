@@ -28,7 +28,7 @@ function Discounts() {
 
 
   return ( 
-    <section className="w-full my-15 md:my-20 px-5">
+    <section className="w-full my-15  px-5">
       <div className="w-full max-w-6xl mx-auto">
           <h2 className="text-xl mb-5 font-semibold">Discounts up to -50%</h2>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-5">

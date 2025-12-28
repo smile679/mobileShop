@@ -5,7 +5,7 @@ import mobile3 from "../../assets/iphone/three.png";
 import mobile4 from "../../assets/iphone/four.png";
 import mobile5 from "../../assets/iphone/uniqueDesign.png";
 import mobile6 from "../../assets/iphone/14Pro.png";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {

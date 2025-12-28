@@ -17,7 +17,7 @@ function Footer() {
           className="transition-all duration-300 ease-in-out"
         />
       </svg>
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 py-20">
 
         {/* Brand */}
         <div>

@@ -1,10 +1,16 @@
 import { Button } from "../../components/ui/button";
+// import mobile8 from "../../assets/iphone/uniqueDesign.png";
+import mobile7 from "../../assets/iphone/14Pro.png";
 import mobile1 from "../../assets/mobile1.png";
 import mobile2 from "../../assets/iphone/two.png";
 import mobile3 from "../../assets/iphone/three.png";
 import mobile4 from "../../assets/iphone/four.png";
-import mobile5 from "../../assets/iphone/uniqueDesign.png";
-import mobile6 from "../../assets/iphone/14Pro.png";
+import mobile5 from "../../assets/iphone/five.png";
+import mobile6 from "../../assets/iphone/six.png";
+import mobile8 from "../../assets/iphone/seven.png";
+import mobile9 from "../../assets/iphone/nine.png";
+import mobile10 from "../../assets/iphone/ten.png";
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -12,10 +18,15 @@ function Hero() {
   const [images, setImages] = useState([
     mobile1,
     mobile2,
+    // mobile8,
     mobile3,
-    mobile4,
-    mobile5,
     mobile6,
+    mobile4,
+    mobile8,
+    mobile7,
+    mobile5,
+    mobile9,
+    mobile10,
   ]);
   const [fade, setFade] = useState(true);
   const navigate = useNavigate();
@@ -37,7 +48,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full flex flex-col items-center bg-gray-900 px-5 sm:px-15 mt-15">
+    <section className="relative w-full flex flex-col items-center bg-gray-900 px-5 sm:px-15 mt-5">
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:pt-35 gap-5">
         <div className="flex flex-col max-sm:items-center max-sm:text-center space-y-5 max-sm:pt-20">
           {/* <p className="text-white">Pro.Beyond.</p> */}

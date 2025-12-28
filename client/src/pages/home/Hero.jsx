@@ -37,7 +37,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="w-full flex items-center bg-gray-900 px-5 sm:px-15 overflow-hidden mt-15">
+    <section className="relative w-full flex flex-col items-center bg-gray-900 px-5 sm:px-15 mt-15">
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:pt-35 gap-5">
         <div className="flex flex-col max-sm:items-center max-sm:text-center space-y-5 max-sm:pt-20">
           {/* <p className="text-white">Pro.Beyond.</p> */}
@@ -49,7 +49,9 @@ function Hero() {
             <Button
               variant="outline"
               className="bg-transparent text-white font-bold w-30 py-5 hover:scale-105 cursor-pointer"
-              onClick={() => {navigate("/products")}}
+              onClick={() => {
+                navigate("/products");
+              }}
             >
               Shop Now
             </Button>
@@ -73,6 +75,18 @@ function Hero() {
           />
         </div>
       </div>
+      <svg
+        viewBox="0 0 1440 390"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        className="w-full h-20 absolute -bottom-5 left-0"
+      >
+        <path
+          d="M 0,400 L 0,225 C 127.02392344497608,251.23923444976077 254.04784688995215,277.47846889952154 337,260 C 419.95215311004785,242.52153110047848 458.83253588516743,181.32535885167462 532,157 C 605.1674641148326,132.67464114832538 712.6220095693781,145.2200956937799 811,131 C 909.3779904306219,116.77990430622009 998.6794258373204,75.79425837320574 1102,37 C 1205.3205741626796,-1.794258373205738 1322.66028708134,-38.39712918660287 1440,-75 L 1440,400 L 0,400 Z"
+          fill="#FAFAFA"
+          className="transition-all duration-300 ease-in-out"
+        />
+      </svg>
     </section>
   );
 }

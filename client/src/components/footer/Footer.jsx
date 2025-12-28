@@ -4,7 +4,19 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="relative bg-gray-900 text-gray-300">
+      <svg
+        viewBox="0 0 1440 390"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        className="w-full h-15 absolute -top-10 left-0 rotate-180"
+      >
+        <path
+          d="M 0,400 L 0,225 C 127.02392344497608,251.23923444976077 254.04784688995215,277.47846889952154 337,260 C 419.95215311004785,242.52153110047848 458.83253588516743,181.32535885167462 532,157 C 605.1674641148326,132.67464114832538 712.6220095693781,145.2200956937799 811,131 C 909.3779904306219,116.77990430622009 998.6794258373204,75.79425837320574 1102,37 C 1205.3205741626796,-1.794258373205738 1322.66028708134,-38.39712918660287 1440,-75 L 1440,400 L 0,400 Z"
+          fill="#FAFAFA"
+          className="transition-all duration-300 ease-in-out"
+        />
+      </svg>
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
 
         {/* Brand */}
@@ -60,8 +72,6 @@ export default function Footer() {
         </div>
 
       </div>
-
-      {/* Bottom */}
       <div className="border-t border-gray-800 text-center py-4 text-sm">
         © {new Date().getFullYear()} Mobile Shop. All rights reserved.
       </div>

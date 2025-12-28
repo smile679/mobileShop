@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="relative bg-gray-900 text-gray-300">
-      <svg
+      {/* <svg
         viewBox="0 0 1440 390"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
@@ -16,7 +16,7 @@ function Footer() {
           fill="#ffffff"
           className="transition-all duration-300 ease-in-out"
         />
-      </svg>
+      </svg> */}
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 py-20">
 
         {/* Brand */}

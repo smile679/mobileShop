@@ -3,7 +3,9 @@ import ShopMap from "../../components/shopmap/ShopMap";
 
 function Contact() {
   return (
-    <section className="w-full bg-gray-900 py-5 shadow-md shadow-gray-900">
+    <section
+    id="contact"
+     className="w-full bg-gray-900 py-5 shadow-md shadow-gray-900">
       <div className="w-full flex flex-col items-center p-5">
         <div className="flex flex-col text-center gap-3 mb-10">
           <h1 className="text-4xl text-white font-bold">Contact Us</h1>

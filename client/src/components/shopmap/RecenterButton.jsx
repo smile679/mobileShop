@@ -15,10 +15,10 @@ export default function RecenterButton({ position, zoom = 15 }) {
     <button
       onClick={handleClick}
       className="absolute bottom-10 right-10 z-1000
-                bg-blue-500 text-sm
-                 shadow-md p-2 rounded-full"
+                bg-white text-sm
+                 shadow-md shadow-gray-900 p-2 rounded-full border-2 border-gray-900"
     >
-      <img src={gpsLocator} alt="locator" className="w-10"/>
+      <img src={gpsLocator} alt="locator" className="w-6"/>
     </button>
   );
 }

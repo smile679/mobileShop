@@ -48,7 +48,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full flex flex-col items-center bg-gray-900 px-5 sm:px-15 mt-5">
+    <section className="relative w-full flex flex-col items-center bg-gray-900 px-5 sm:px-15 mt-5 overflow-hidden">
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:pt-35 gap-5">
         <div className="flex flex-col max-sm:items-center max-sm:text-center space-y-5 max-sm:pt-20">
           {/* <p className="text-white">Pro.Beyond.</p> */}
@@ -86,7 +86,7 @@ function Hero() {
           />
         </div>
       </div>
-      <svg
+      {/* <svg
         viewBox="0 0 1440 390"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
@@ -97,7 +97,7 @@ function Hero() {
           fill="#FAFAFA"
           className="transition-all duration-300 ease-in-out"
         />
-      </svg>
+      </svg> */}
     </section>
   );
 }

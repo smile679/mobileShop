@@ -10,6 +10,8 @@ import watch01 from "../../assets/watch01.png";
 import Discounts from "../../pages/home/Discounts";
 import About from "../../pages/home/About";
 import Contact from "../../pages/home/Contact";
+import TradeIn from "../../pages/home/TradeIn";
+import { useEffect } from "react";
 
 function Home() {
   const pro = [
@@ -44,6 +46,15 @@ function Home() {
     },
   ];
 
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      scroller.scrollTo(location.state.scrollTo, {
+        smooth: true,
+        duration: 500,
+        offset: -80,
+      });
+    }
+  }, [location]);
   return (
     <section className="flex flex-col">
       <Hero />
@@ -96,6 +107,7 @@ function Home() {
           ))}
       </div>
       <Contact />
+      <TradeIn />
       <Discounts />
     </section>
   );

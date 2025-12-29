@@ -4,10 +4,10 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { useState } from "react";
 import Sell from "../form/Sell";
-import Exchange from "../form/Sell";
+import Exchange from "../form/exchange";
 
 function SellItem() {
-  const [ sellOption, setSellOption ] = useState('')
+  const [ sellOption, setSellOption ] = useState('sell')
 
   return ( 
     <div className="w-full flex flex-col mt-15">
@@ -19,7 +19,7 @@ function SellItem() {
           <CardHeader>
             <CardTitle>
               <RadioGroup 
-                defaultValue="sell" 
+                defaultValue={sellOption} 
                 className="flex"
                 onValueChange={(value) => {
                   setSellOption(value)

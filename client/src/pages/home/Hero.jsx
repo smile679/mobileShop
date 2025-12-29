@@ -69,6 +69,7 @@ function Hero() {
             <Button
               variant="outline"
               className="bg-white text-black font-bold w-30 py-5 hover:bg-transparent hover:text-white hover:scale-105 cursor-pointer"
+              onClick={()=>navigate('/sell')}
             >
               Sell Item
             </Button>

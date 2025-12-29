@@ -9,7 +9,7 @@ function Exchange() {
     <form>
       <div className="flex flex-col gap-6">
         <div className="grid gap-2">
-          <Label htmlFor="email">ootoro</Label>
+          <Label htmlFor="email">Name</Label>
           <Input id="name" type="name" placeholder="your name" required />
         </div>
         <div className="grid gap-2">

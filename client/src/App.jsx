@@ -6,11 +6,13 @@ import NewProducts from './pages/home/NewProducts'
 import Footer from './components/footer/Footer'
 import About from './pages/home/About'
 import SellItem from './components/sell/layout'
+import ScrollToTop from './components/others/ScrollToTop'
 
 function App(){
 
   return (
     <div className='relative min-h-screen'>
+      <ScrollToTop />
       <Header/>
       <Routes>
         <Route path='/' element={<Home />} /> 

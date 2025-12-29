@@ -3,121 +3,152 @@ import { Input } from "../ui/input";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { device_brands, storage_options, ram_options, battery_options } from "../../constants/DeviceOptions";
+import { useState } from "react";
 
 function Exchange() {
+  const [formData, setFormData] = useState(
+    {
+      name : "", 
+      phone : "",
+      model : "",
+      device : "samsung",
+      storage : "32",
+      ram : "3",
+      battery : "80-100"
+    })
+
+    console.log(formData);
+
   return (
     <form>
       <div className="flex flex-col gap-6">
         <div className="grid gap-2">
-          <Label htmlFor="email">Name</Label>
-          <Input id="name" type="name" placeholder="your name" required />
+          <Label htmlFor="name">Name</Label>
+          <Input 
+            id="name"  
+            type="name" 
+            placeholder="your name" 
+            required
+            value={formData?.name}
+            onChange={(e)=> setFormData(prev=> ({ ...prev, name : e.target.value}))}
+          />
         </div>
         <div className="grid gap-2">
           <Label htmlFor="email">Phone</Label>
-          <Input id="phone" type="phone" placeholder="+251-9XXXXXXX" required />
+          <Input 
+            id="phone" 
+            type="phone" 
+            placeholder="+251-9XXXXXXX" 
+            required 
+            value={formData?.phone}
+            onChange={(e)=> setFormData(prev=> ({ ...prev, phone : e.target.value}))}
+          />
         </div>
-        <div className="flex flex-col gap-y-5">
-          <h3 className="font-semibold">Device Info</h3>
-          <RadioGroup defaultValue="samsung">
+        <div className="flex flex-col gap-y-3">
+          <h2 className="font-bold">Device Info</h2>
+          <h3 className="font-semibold">Device</h3>
+          <RadioGroup 
+            defaultValue={formData.device} 
+            onValueChange={(value)=>
+              setFormData(prev=> ({ ...prev, device : value})
+            )}
+          >
             <div className="flex gap-5">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="samsung" id="samsung" />
-                <Label htmlFor="option-one">Samsung</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="iphone" id="iphone" />
-                <Label htmlFor="iphone">Iphone</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="tecno" id="tecno" />
-                <Label htmlFor="tecno">Tecno</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="othere" id="othere" />
-                <Label htmlFor="othere">Othere</Label>
-              </div>
+              {
+                device_brands && device_brands?.map(device=> (
+                  <div 
+                    key={device.id}
+                    className="flex items-center space-x-2"
+                  >
+                    <RadioGroupItem value={device?.id} id={device?.id} />
+                    <Label htmlFor={device?.id}>{device?.name}</Label>
+                  </div>
+                ))
+              }
             </div>
           </RadioGroup>
         </div>
         <div className="grid gap-2">
-          <Label htmlFor="email">Model</Label>
+          <Label htmlFor="model">Model</Label>
           <Input
             id="model"
             type="text"
-            placeholder="ex samsung s21 ultra"
+            placeholder="Ex: samsung s21 ultra"
             required
+            value={formData.model}
+            onChange={(e)=>setFormData(prev=> ({ ...prev, model : e.target.value }))}
           />
         </div>
-        <div className="flex flex-col gap-y-5">
+        <div className="flex flex-col gap-y-2">
           <h3 className="font-semibold">Storage</h3>
-          <RadioGroup defaultValue="32" onValueChange={()=>console.log("storage", value)
-          }>
-            <div className="flex gap-5">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="32" id="32" />
-                <Label htmlFor="32">32 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="64" id="64" />
-                <Label htmlFor="64">64 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="128" id="128" />
-                <Label htmlFor="128">128 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="256" id="256" />
-                <Label htmlFor="256">256 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="512" id="512" />
-                <Label htmlFor="512">512 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="1tr" id="1tr" />
-                <Label htmlFor="1tr">1 Tr</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="other" id="other" />
-                <Label htmlFor="other">Other</Label>
-              </div>
-            </div>
-          </RadioGroup>
-        </div>
-        <div className="flex flex-col gap-y-5">
-          <h3 className="font-semibold">Ram</h3>
           <RadioGroup 
-            defaultValue="3"
-            onValueChange={()=>console.log("ram", value)
+              defaultValue={formData.storage}
+              onValueChange={(value)=>(setFormData(prev=> ({ ...prev, storage : value})))
           }>
             <div className="flex gap-5">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="3" id="3" />
-                <Label htmlFor="3">3 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="4" id="4" />
-                <Label htmlFor="4">4 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="6" id="6" />
-                <Label htmlFor="6">6 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="8" id="8" />
-                <Label htmlFor="8">8 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="12" id="12" />
-                <Label htmlFor="12">12 Gb</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="other" id="other" />
-                <Label htmlFor="other">Other</Label>
-              </div>
+              {
+                storage_options && storage_options?.map(item=>(
+                  <div 
+                    key={item.id}
+                    className="flex items-center space-x-2"
+                  >
+                    <RadioGroupItem value={item?.id} id={item?.id} />
+                    <Label htmlFor={item?.id}>{item?.name}</Label>
+                  </div>
+                ))
+              }
             </div>
           </RadioGroup>
         </div>
+        {
+          formData && formData.device !== "iphone" ?
+          (
+            <div className="flex flex-col gap-y-2">
+              <h3 className="font-semibold">Ram</h3>
+              <RadioGroup 
+                defaultValue={formData.ram}
+                onValueChange={(value)=> setFormData(prev=> ({ ...prev , ram : value}))}
+              >
+                <div className="flex gap-5">
+                  {
+                    ram_options && ram_options?.map(items=> (
+                      <div 
+                        key={items.id}
+                        className="flex items-center space-x-2"
+                      >
+                        <RadioGroupItem value={items?.id} id={items?.id} />
+                        <Label htmlFor={items?.id}>{items?.name}</Label>
+                      </div>
+                    ))
+                  }
+                </div>
+              </RadioGroup>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-y-2">
+              <h3 className="font-semibold">Battery</h3>
+              <RadioGroup 
+                defaultValue={formData.battery}
+                onValueChange={(value)=> setFormData(prev=> ({ ...prev , battery : value}))}
+              >
+                <div className="flex gap-5">
+                  {
+                    battery_options && battery_options?.map(items=> (
+                      <div 
+                        key={items.id}
+                        className="flex items-center space-x-2"
+                      >
+                        <RadioGroupItem value={items?.id} id={items?.id} />
+                        <Label htmlFor={items?.id}>{items?.name}</Label>
+                      </div>
+                    ))
+                  }
+                </div>
+              </RadioGroup>
+            </div>
+          )
+        }
         <div className="grid gap-2">
           <Label htmlFor="description">
             Description

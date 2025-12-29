@@ -7,8 +7,7 @@ import { Button } from "../ui/button";
 function Sell() {
   return (
     <form>
-      cfyvbijk
-      {/* <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6">
         <div className="grid gap-2">
           <Label htmlFor="email">Name</Label>
           <Input id="name" type="name" placeholder="your name" required />
@@ -130,7 +129,7 @@ function Sell() {
           />
         </div>
         <Button type="submit">Submit</Button>
-      </div> */}
+      </div>
     </form>
   );
 }

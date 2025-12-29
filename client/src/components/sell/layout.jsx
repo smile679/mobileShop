@@ -7,7 +7,7 @@ import Sell from "../form/Sell";
 import Exchange from "../form/exchange";
 
 function SellItem() {
-  const [ sellOption, setSellOption ] = useState('sell')
+  const [ sellOption, setSellOption ] = useState('exchange')
 
   return ( 
     <div className="w-full flex flex-col mt-15">
@@ -28,12 +28,12 @@ function SellItem() {
                 }}
                 >
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="sell" id="sell" />
-                  <Label htmlFor="sell">Sell</Label>
-                </div>
-                <div className="flex items-center space-x-2">
                   <RadioGroupItem value="exchange" id="exchange" />
                   <Label htmlFor="exchange">Exchange</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="sell" id="sell" />
+                  <Label htmlFor="sell">Sell</Label>
                 </div>
               </RadioGroup>
             </CardTitle>
@@ -41,9 +41,9 @@ function SellItem() {
           <CardContent>
             <Card className="p-5 max-w-1/2">
               {
-                sellOption === "sell" ?
-                <Sell /> :
-                <Exchange />
+                sellOption === "exchange" ?
+                <Exchange /> :
+                <Sell />
               }
             </Card>
           </CardContent>

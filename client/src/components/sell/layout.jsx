@@ -4,6 +4,7 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import { useState } from "react";
 import Sell from "../form/Sell";
+import Exchange from "../form/Sell";
 
 function SellItem() {
   const [ sellOption, setSellOption ] = useState('')
@@ -39,7 +40,11 @@ function SellItem() {
           </CardHeader>
           <CardContent>
             <Card className="p-5 max-w-1/2">
-              <Sell />
+              {
+                sellOption === "sell" ?
+                <Sell /> :
+                <Exchange />
+              }
             </Card>
           </CardContent>
         </Card>

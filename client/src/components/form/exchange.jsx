@@ -4,12 +4,13 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 
-function Exchange() {
+function Sell() {
   return (
     <form>
-      <div className="flex flex-col gap-6">
+      cfyvbijk
+      {/* <div className="flex flex-col gap-6">
         <div className="grid gap-2">
-          <Label htmlFor="email">ootoro</Label>
+          <Label htmlFor="email">Name</Label>
           <Input id="name" type="name" placeholder="your name" required />
         </div>
         <div className="grid gap-2">
@@ -129,9 +130,9 @@ function Exchange() {
           />
         </div>
         <Button type="submit">Submit</Button>
-      </div>
+      </div> */}
     </form>
   );
 }
 
-export default Exchange;
+export default Sell;

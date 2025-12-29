@@ -39,12 +39,8 @@ function SellItem() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <Card className="p-5 max-w-1/2">
-              {
-                sellOption === "exchange" ?
-                <Exchange /> :
-                <Sell />
-              }
+            <Card className="p-5">
+             <Sell sellOption={sellOption}/>
             </Card>
           </CardContent>
         </Card>

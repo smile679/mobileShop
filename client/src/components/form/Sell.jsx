@@ -21,18 +21,16 @@ function Exchange({ sellOption }) {
     ram: "3",
     battery: "80-100",
     ex_model: "",
-    ex_storage : '32',
-    ex_device : 'samsung',
+    ex_storage: "32",
+    ex_device: "samsung",
     ex_ram: "3",
     ex_battery: "80-100",
-    description : "",
+    description: "",
   });
-
-  console.log(formData);
 
   return (
     <form className="w-full">
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
         <div className="w-full flex flex-col gap-6">
           <div className="grid gap-2">
             <Label htmlFor="name">Name</Label>
@@ -47,6 +45,7 @@ function Exchange({ sellOption }) {
               }
             />
           </div>
+
           <div className="grid gap-2">
             <Label htmlFor="email">Phone</Label>
             <Input
@@ -60,6 +59,7 @@ function Exchange({ sellOption }) {
               }
             />
           </div>
+
           <div className="flex flex-col gap-y-3">
             <h2 className="font-bold">Device Info</h2>
             <h3 className="font-semibold">Device</h3>
@@ -69,20 +69,20 @@ function Exchange({ sellOption }) {
                 setFormData((prev) => ({ ...prev, device: value }))
               }
             >
-              <div className="flex gap-5">
-                {device_brands &&
-                  device_brands?.map((device) => (
-                    <div
-                      key={device.id}
-                      className="flex items-center space-x-2"
-                    >
-                      <RadioGroupItem value={device?.id} id={device?.id} />
-                      <Label htmlFor={device?.id}>{device?.name}</Label>
-                    </div>
-                  ))}
+              <div className="flex flex-wrap gap-3 sm:gap-5">
+                {device_brands?.map((device) => (
+                  <div
+                    key={device.id}
+                    className="flex items-center space-x-2 whitespace-nowrap"
+                  >
+                    <RadioGroupItem value={device?.id} id={device?.id} />
+                    <Label htmlFor={device?.id}>{device?.name}</Label>
+                  </div>
+                ))}
               </div>
             </RadioGroup>
           </div>
+
           <div className="grid gap-2">
             <Label htmlFor="model">Model</Label>
             <Input
@@ -96,6 +96,7 @@ function Exchange({ sellOption }) {
               }
             />
           </div>
+
           <div className="flex flex-col gap-y-2">
             <h3 className="font-semibold">Storage</h3>
             <RadioGroup
@@ -104,18 +105,21 @@ function Exchange({ sellOption }) {
                 setFormData((prev) => ({ ...prev, storage: value }))
               }
             >
-              <div className="flex gap-5">
-                {storage_options &&
-                  storage_options?.map((item) => (
-                    <div key={item.id} className="flex items-center space-x-2">
-                      <RadioGroupItem value={item?.id} id={item?.id} />
-                      <Label htmlFor={item?.id}>{item?.name}</Label>
-                    </div>
-                  ))}
+              <div className="flex flex-wrap gap-3 sm:gap-5">
+                {storage_options?.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex items-center space-x-2 whitespace-nowrap"
+                  >
+                    <RadioGroupItem value={item?.id} id={item?.id} />
+                    <Label htmlFor={item?.id}>{item?.name}</Label>
+                  </div>
+                ))}
               </div>
             </RadioGroup>
           </div>
-          {formData && formData.device !== "iphone" ? (
+
+          {formData.device !== "iphone" ? (
             <div className="flex flex-col gap-y-2">
               <h3 className="font-semibold">Ram</h3>
               <RadioGroup
@@ -124,17 +128,16 @@ function Exchange({ sellOption }) {
                   setFormData((prev) => ({ ...prev, ram: value }))
                 }
               >
-                <div className="flex gap-5">
-                  {ram_options &&
-                    ram_options?.map((items) => (
-                      <div
-                        key={items.id}
-                        className="flex items-center space-x-2"
-                      >
-                        <RadioGroupItem value={items?.id} id={items?.id} />
-                        <Label htmlFor={items?.id}>{items?.name}</Label>
-                      </div>
-                    ))}
+                <div className="flex flex-wrap gap-3 sm:gap-5">
+                  {ram_options?.map((items) => (
+                    <div
+                      key={items.id}
+                      className="flex items-center space-x-2 whitespace-nowrap"
+                    >
+                      <RadioGroupItem value={items?.id} id={items?.id} />
+                      <Label htmlFor={items?.id}>{items?.name}</Label>
+                    </div>
+                  ))}
                 </div>
               </RadioGroup>
             </div>
@@ -147,81 +150,83 @@ function Exchange({ sellOption }) {
                   setFormData((prev) => ({ ...prev, battery: value }))
                 }
               >
-                <div className="flex gap-5">
-                  {battery_options &&
-                    battery_options?.map((items) => (
-                      <div
-                        key={items.id}
-                        className="flex items-center space-x-2"
-                      >
-                        <RadioGroupItem value={items?.id} id={items?.id} />
-                        <Label htmlFor={items?.id}>{items?.name}</Label>
-                      </div>
-                    ))}
+                <div className="flex flex-wrap gap-3 sm:gap-5">
+                  {battery_options?.map((items) => (
+                    <div
+                      key={items.id}
+                      className="flex items-center space-x-2 whitespace-nowrap"
+                    >
+                      <RadioGroupItem value={items?.id} id={items?.id} />
+                      <Label htmlFor={items?.id}>{items?.name}</Label>
+                    </div>
+                  ))}
                 </div>
               </RadioGroup>
             </div>
           )}
         </div>
-          {
-            sellOption && sellOption === "exchange" ?
-             <div className="w-full flex flex-col gap-y-5">
-          {/* <h2 className="text-lg font-semibold">Exchange To</h2> */}
-          <div className="flex flex-col gap-y-3">
-            <h3 className="font-semibold">Exchange To</h3>
-            <RadioGroup
-              defaultValue={formData.ex_device}
-              onValueChange={(value) =>
-                setFormData((prev) => ({ ...prev, ex_device: value }))
-              }
-            >
-              <div className="flex gap-5">
-                {device_brands &&
-                  device_brands?.map((device) => (
+
+        {sellOption === "exchange" && (
+          <div className="w-full flex flex-col gap-y-5">
+            <div className="flex flex-col gap-y-3">
+              <h3 className="font-semibold">Exchange To</h3>
+              <RadioGroup
+                defaultValue={formData.ex_device}
+                onValueChange={(value) =>
+                  setFormData((prev) => ({ ...prev, ex_device: value }))
+                }
+              >
+                <div className="flex flex-wrap gap-3 sm:gap-5">
+                  {device_brands?.map((device) => (
                     <div
                       key={device.id}
-                      className="flex items-center space-x-2"
+                      className="flex items-center space-x-2 whitespace-nowrap"
                     >
                       <RadioGroupItem value={device?.id} id={device?.id} />
                       <Label htmlFor={device?.id}>{device?.name}</Label>
                     </div>
                   ))}
-              </div>
-            </RadioGroup>
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="model">Model</Label>
-            <Input
-              id="model"
-              type="text"
-              placeholder="Ex: samsung s21 ultra"
-              required
-              value={formData.ex_model}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, ex_model: e.target.value }))
-              }
-            />
-          </div>
-          <div className="flex flex-col gap-y-2">
-            <h3 className="font-semibold">Storage</h3>
-            <RadioGroup
-              defaultValue={formData.ex_storage}
-              onValueChange={(value) =>
-                setFormData((prev) => ({ ...prev, ex_storage: value }))
-              }
-            >
-              <div className="flex gap-5">
-                {storage_options &&
-                  storage_options?.map((item) => (
-                    <div key={item.id} className="flex items-center space-x-2">
+                </div>
+              </RadioGroup>
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="model">Model</Label>
+              <Input
+                id="model"
+                type="text"
+                placeholder="Ex: samsung s21 ultra"
+                required
+                value={formData.ex_model}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, ex_model: e.target.value }))
+                }
+              />
+            </div>
+
+            <div className="flex flex-col gap-y-2">
+              <h3 className="font-semibold">Storage</h3>
+              <RadioGroup
+                defaultValue={formData.ex_storage}
+                onValueChange={(value) =>
+                  setFormData((prev) => ({ ...prev, ex_storage: value }))
+                }
+              >
+                <div className="flex flex-wrap gap-3 sm:gap-5">
+                  {storage_options?.map((item) => (
+                    <div
+                      key={item.id}
+                      className="flex items-center space-x-2 whitespace-nowrap"
+                    >
                       <RadioGroupItem value={item?.id} id={item?.id} />
                       <Label htmlFor={item?.id}>{item?.name}</Label>
                     </div>
                   ))}
-              </div>
-            </RadioGroup>
-          </div>
-            { formData && formData.device !== "iphone" ? (
+                </div>
+              </RadioGroup>
+            </div>
+
+            {formData.device !== "iphone" ? (
               <div className="flex flex-col gap-y-2">
                 <h3 className="font-semibold">Ram</h3>
                 <RadioGroup
@@ -230,21 +235,20 @@ function Exchange({ sellOption }) {
                     setFormData((prev) => ({ ...prev, ex_ram: value }))
                   }
                 >
-                  <div className="flex gap-5">
-                    {ram_options &&
-                      ram_options?.map((items) => (
-                        <div
-                          key={items.id}
-                          className="flex items-center space-x-2"
-                        >
-                          <RadioGroupItem value={items?.id} id={items?.id} />
-                          <Label htmlFor={items?.id}>{items?.name}</Label>
-                        </div>
-                      ))}
+                  <div className="flex flex-wrap gap-3 sm:gap-5">
+                    {ram_options?.map((items) => (
+                      <div
+                        key={items.id}
+                        className="flex items-center space-x-2 whitespace-nowrap"
+                      >
+                        <RadioGroupItem value={items?.id} id={items?.id} />
+                        <Label htmlFor={items?.id}>{items?.name}</Label>
+                      </div>
+                    ))}
                   </div>
                 </RadioGroup>
               </div>
-              ) : (
+            ) : (
               <div className="flex flex-col gap-y-2">
                 <h3 className="font-semibold">Battery</h3>
                 <RadioGroup
@@ -253,39 +257,47 @@ function Exchange({ sellOption }) {
                     setFormData((prev) => ({ ...prev, ex_battery: value }))
                   }
                 >
-                  <div className="flex gap-5">
-                    {battery_options &&
-                      battery_options?.map((items) => (
-                        <div
-                          key={items.id}
-                          className="flex items-center space-x-2"
-                        >
-                          <RadioGroupItem value={items?.id} id={items?.id} />
-                          <Label htmlFor={items?.id}>{items?.name}</Label>
-                        </div>
-                      ))}
+                  <div className="flex flex-wrap gap-3 sm:gap-5">
+                    {battery_options?.map((items) => (
+                      <div
+                        key={items.id}
+                        className="flex items-center space-x-2 whitespace-nowrap"
+                      >
+                        <RadioGroupItem value={items?.id} id={items?.id} />
+                        <Label htmlFor={items?.id}>{items?.name}</Label>
+                      </div>
+                    ))}
                   </div>
                 </RadioGroup>
               </div>
             )}
-          <div className="grid gap-2">
-            <Label htmlFor="description">
-              Description
-              <span className="text-sm text-muted-foreground">(optional)</span>
-            </Label>
-            <Textarea 
-              id="description"
-              placeholder="Type your message here."
-              value={formData.description}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, description: e.target.value }))
-              }
-            />
+
+            <div className="grid gap-2">
+              <Label htmlFor="description">
+                Description{" "}
+                <span className="text-sm text-muted-foreground">
+                  (optional)
+                </span>
+              </Label>
+              <Textarea
+                id="description"
+                placeholder="Type your message here."
+                value={formData.description}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    description: e.target.value,
+                  }))
+                }
+              />
+            </div>
           </div>
-        </div> : null
-    }
+        )}
       </div>
-      <Button type="submit" className="mt-5">Submit</Button>
+
+      <Button type="submit" className="mt-5 w-full sm:w-auto">
+        Submit
+      </Button>
     </form>
   );
 }

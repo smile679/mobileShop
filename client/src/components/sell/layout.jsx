@@ -11,24 +11,20 @@ function SellItem() {
   return ( 
     <div className="w-full flex flex-col mt-15">
       <div className="relative w-full h-48 sm:h-64 lg:h-80 overflow-hidden">
-        {/* Background Image */}
         <img
           src={banner}
           alt="Exchange banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Centered Text */}
         <div className="relative z-10 flex h-full w-full items-center justify-center text-center px-4">
           <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-pretty leading-tight max-w-2xl animate-pulse">
             exchange your Phone With iPhone 17 Pro Max
           </h2>
         </div>
       </div>
-
 
       <div className="w-full">
         <Card>

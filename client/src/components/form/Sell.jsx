@@ -226,7 +226,7 @@ function Exchange({ sellOption }) {
               </RadioGroup>
             </div>
 
-            {formData.device !== "iphone" ? (
+            {formData.ex_device !== "iphone" ? (
               <div className="flex flex-col gap-y-2">
                 <h3 className="font-semibold">Ram</h3>
                 <RadioGroup

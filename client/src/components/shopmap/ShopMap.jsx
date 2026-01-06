@@ -14,7 +14,7 @@ import RecenterButton from "./RecenterButton";
           zoom={15}
           // style={{ height: "400px", width: "100%", zIndex: "10", borderRadius: "10px" }}
           className="w-full h-full z-10"
-          scrollWheelZoom={false}
+          scrollWheelZoom={true}
         >
           <TileLayer
             attribution='&copy; OpenStreetMap contributors'
